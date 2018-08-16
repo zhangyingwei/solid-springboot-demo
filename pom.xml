@@ -42,7 +42,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.zhangyingwei.solid</groupId>
+            <groupId>com.github.zhangyingwei</groupId>
             <artifactId>solid-spring</artifactId>
             <version>1.0</version>
         </dependency>

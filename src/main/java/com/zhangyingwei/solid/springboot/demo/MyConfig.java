@@ -2,7 +2,7 @@ package com.zhangyingwei.solid.springboot.demo;
 
 import com.github.zhangyingwei.solid.config.FileTemplateResourceLoader;
 import com.github.zhangyingwei.solid.config.SolidConfiguration;
-import com.github.zhangyingwei.solid.spring.SprintSolidTemplateResolver;
+import com.github.zhangyingwei.solid.spring.SolidSpringTemplateResolver;
 import com.github.zhangyingwei.solid.template.TemplateResolver;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -21,10 +21,10 @@ public class MyConfig {
     }
 
     @Bean
-    public SprintSolidTemplateResolver getViewResolver(@Qualifier("solidConfiguration") SolidConfiguration configuration) {
+    public SolidSpringTemplateResolver getViewResolver(@Qualifier("solidConfiguration") SolidConfiguration configuration) {
         TemplateResolver templateResolver = new TemplateResolver(configuration);
         templateResolver.setSuffix(".html");
 //        templateResolver.setPrefix("templates/tale");
-        return new SprintSolidTemplateResolver(templateResolver);
+        return new SolidSpringTemplateResolver(templateResolver);
     }
 }
